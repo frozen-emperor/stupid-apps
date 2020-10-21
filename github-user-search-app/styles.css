@@ -1,0 +1,46 @@
+.img-thumbnail{
+    width: 8rem;
+    height: 8rem;
+}
+.heading{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.result-heading{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.user-data{
+    background-color: rgb(251, 252, 248);
+}
+
+.error{
+    width: 500px;
+    height: 270px;
+}
+.navbar{ 
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container{
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 420px) {
+    .heading,.result-heading{
+        font-size:1.5rem;
+    }
+}
+@media screen and (max-width: 570px) {
+    .col-sm-3,.col-sm-2{
+        display: flex;
+        justify-content: center;
+    }
+    .col-sm-2 img{
+        width: inherit;
+        height: 15rem;
+    }
+}

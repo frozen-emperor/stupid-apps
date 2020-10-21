@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(255, 221, 221);
+    margin: 0px;
+}
+
+.header {
+    height: 5rem;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+}
+
+.scoreboard {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.restart button {
+    height: 3rem;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    border: black solid 1px;
+    border-radius: 5px;
+    font-size: 2rem;
+    color: white;
+}
+
+.scoreboard td {
+    height: 4rem;
+    width: 10rem;
+    background-color: blanchedalmond;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.board {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+}
+
+.box {
+    height: 5rem;
+    width: 5rem;
+    background-color: rgb(63, 158, 241);
+    color: black;
+    font-size: 4rem;
+    text-align: center;
+    vertical-align: middle;
+}
