@@ -1,0 +1,23 @@
+.note-container {
+    margin-top: 2%;
+}
+
+.add-note {
+    float: right;
+    position: absolute;
+    bottom: 5%;
+    right: 2.5%;
+}
+
+@media screen and (max-width: 400px) {
+    .add-note {
+        float: right;
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+    }
+}
+
+.delete-note {
+    float: right;
+}
