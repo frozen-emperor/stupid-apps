@@ -9,6 +9,7 @@ let wins = [
     [2, 4, 6] //diags
 ]; //just for reference
 $(document).ready(() => {
+    setScoreBoard();
     let x = true;
     let i = 0;
     let gameOver = false;
@@ -16,7 +17,25 @@ $(document).ready(() => {
     let playerTwoScore = 0;
     console.log("DOM ready");
 
-    $("td.box").each(function() {
+    $(window).resize(function () {
+        setScoreBoard();
+    });
+
+    function setScoreBoard(){
+        if (window.innerWidth < 780) {
+            $('#playerOneScoreLabel').html('P1');
+            $('#playerTwoScoreLabel').html('P2');
+        } else {
+            $('#playerOneScoreLabel').html('Player 1');
+            $('#playerTwoScoreLabel').html('Player 2');
+        }
+    }
+
+    $("body").on('DOMSubtreeModified', "#playerOneScore", function() {
+        console.log("changed");
+    });
+
+    $("td.box").each(function () {
         $(this).attr('i', i++);
     });
 
@@ -39,15 +58,23 @@ $(document).ready(() => {
         $('td.box').empty();
     });
 
-    function incrScore(x) {
-        console.log(x);
-        if (x) {
-            $('#playerOneScore').text(++playerOneScore);
+    function incrScore(p1win) {
+        let winner;
+        console.log(p1win);
+        if (p1win) {
+            $('#playerOneScore').text(createScore(++playerOneScore));
+            winner = "player one";
         } else {
-            $('#playerTwoScore').text(++playerTwoScore);
+            $('#playerTwoScore').text(createScore(++playerTwoScore));
+            winner = "player two";
         }
+        setTimeout(alert(`${winner} won the round`),1000);
         console.log(playerOneScore);
         console.log(playerTwoScore);
+    }
+
+    function createScore(score) {
+        return (score > 9) ? score : '0' + score;
     }
 
     function checkWin(value) {
@@ -66,11 +93,11 @@ $(document).ready(() => {
                 let i = $(elem).attr('i');
                 //for diagonal condition
                 (i == 4) ? (++diag[0], ++diag[1]) :
-                ((i % 4 == 0) ? ++diag[0] :
-                    ((i % 2 == 0) ? ++diag[1] : console.log("not diagonal")));
+                    ((i % 4 == 0) ? ++diag[0] :
+                        ((i % 2 == 0) ? ++diag[1] : console.log("not diagonal")));
                 //for column condition
                 //console.log(`i : ${i}`);
-                (i < 3) ? ++row[0]: ((i < 6) ? ++row[1] : ((i < 9) ? ++row[2] : console.log("not row")));
+                (i < 3) ? ++row[0] : ((i < 6) ? ++row[1] : ((i < 9) ? ++row[2] : console.log("not row")));
                 //for column condition
                 ++col[i % 3];
             });
@@ -86,7 +113,6 @@ $(document).ready(() => {
             }
         } else {
             return false;
-            console.log("definitely not won.");
         }
     }
 });

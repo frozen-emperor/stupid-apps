@@ -1,6 +1,7 @@
 body {
-    background-color: rgb(255, 221, 221);
+    background-color: rgb(245, 245, 245);
     margin: 0px;
+    font-family: 'Courier New', Courier, monospace
 }
 
 .header {
@@ -30,7 +31,7 @@ body {
 .scoreboard td {
     height: 4rem;
     width: 10rem;
-    background-color: blanchedalmond;
+    background-color: rgb(245, 245, 245);
     text-align: center;
     font-size: 2rem;
 }
@@ -51,3 +52,4 @@ body {
     text-align: center;
     vertical-align: middle;
 }
+
