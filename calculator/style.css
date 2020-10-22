@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(253, 253, 203);
+}
+
+.calc-app {
+    background-color: chartreuse;
+    width: 25rem;
+    height: 30rem;
+    max-height: inherit;
+    display: grid;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    border: 0.2rem rgb(87, 87, 87) solid;
+    border-radius: 0.3rem;
+    transform: translate(-50%, -50%);
+}
+
+.calc-inp {
+    margin: 0.5rem;
+    width: auto;
+    font-size: 20px;
+    text-align: end;
+    padding: 2rem;
+    border: 0.2rem rgb(87, 87, 87) solid;
+    border-radius: 0.3rem;
+}
+
+.calc-button-grid {
+    background-color: chartreuse;
+    margin: 0.5rem;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+#clear {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.2rem;
+}
+
+.calc-button-grid button:active {
+    box-shadow: #666;
+    transform: translateY(+2px);
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(105, 105, 105));
+}
+
+.calc-button-grid button {
+    background-image: linear-gradient(to bottom right, rgb(105, 105, 105), rgb(255, 255, 255));
+    border-radius: 0.3rem;
+    font-size: 2rem;
+}
+
+.calc-button-grid .margined-button {
+    margin-left: 0.3rem;
+}
+
+.heading {
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: center;
+}
+
+@media only screen and (max-width:420px) {
+    .calc-app {
+        width: auto;
+    }
+    .calc-button-grid {
+        width: auto;
+    }
+    .calc-inp {
+        width: auto;
+    }
+}

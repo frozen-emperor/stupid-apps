@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <h1 class="heading">Calculator</h1>
+    <div class="calc-app">
+        <input type="text" class="calc-inp" name="calc-inp" id="calc-inp" placeholder="Calculate here" readonly>
+        <div class="calc-button-grid">
+            <button value="clc" id="clear">clc</button>
+            <button class="margined-button" value="-">-</button>
+            <button class="margined-button" value="/">/</button>
+            <button class="margined-button" value="*">*</button>
+        </div>
+        <div class="calc-button-grid">
+            <button value="1">1</button>
+            <button class="margined-button" value="2">2</button>
+            <button class="margined-button" value="3">3</button>
+            <button class="margined-button" value="+">+</button>
+        </div>
+        <div class="calc-button-grid">
+            <button value="4">4</button>
+            <button class="margined-button" value="5">5</button>
+            <button class="margined-button" value="6">6</button>
+            <button class="margined-button" value="=" id="equals">=</button>
+        </div>
+        <div class="calc-button-grid">
+            <button value="7">7</button>
+            <button class="margined-button" value="8">8</button>
+            <button class="margined-button" value="9">9</button>
+            <button class="margined-button" value="0">0</button>
+        </div>
+    </div>
+</body>
+
+</html>
